@@ -14,9 +14,9 @@ function fish_right_prompt
         set status_color $fish_color_error
     end
 
-    if test -n "$CMD_DURATION" -a "$CMD_DURATION" -gt 100
-        set -l duration_copy $CMD_DURATION
-        set -l duration (echo $CMD_DURATION | humanize_duration)
+    if test -n "$cmd_duration" -a "$cmd_duration" -gt 100
+        set -l duration_copy $cmd_duration
+        set -l duration (echo $cmd_duration | humanize_duration)
 
         echo -sn (set_color $status_color) "$duration" (set_color normal)
 
